@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 import logger from "morgan";
 import { dirname } from "dirname-filename-esm";
 
-import usersRouter from "./routers/users.js";
+import helloRouter from "./routers/hello.js";
 
 import serverless from "serverless-http";
 
@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(dirname(import.meta), "../", "public")));
 
 // routers
-app.use("/users", usersRouter);
+app.use("/hello", helloRouter);
 
 export default app;
 export const handler = serverless(app);
