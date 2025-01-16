@@ -17,8 +17,7 @@
         "hbs": "~4.0.4",
         "http-errors": "~1.6.3",
         "morgan": "~1.9.1",
-        "pug": "2.0.0-beta11",
-        "serverless-http": "^3.2.0"
+        "pug": "2.0.0-beta11"
     },
     "devDependencies": {
         "gen-express-app": "^0.2.5",

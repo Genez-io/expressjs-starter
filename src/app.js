@@ -6,8 +6,6 @@ import { dirname } from "dirname-filename-esm";
 
 import helloRouter from "./routers/hello.js";
 
-import serverless from "serverless-http";
-
 // app
 const app = express();
 
@@ -21,5 +19,6 @@ app.use(express.static(path.join(dirname(import.meta), "../", "public")));
 // routers
 app.use("/hello", helloRouter);
 
-export default app;
-export const handler = serverless(app);
+app.listen(8080, () => {
+    console.log("Server is running on port 8080. Check the app on http://localhost:8080");
+});
